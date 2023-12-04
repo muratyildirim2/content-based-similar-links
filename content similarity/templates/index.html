@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Similar Links</title>
+</head>
+<body>
+    <h1>En Fazla Benzeyen Linkler:</h1>
+    <ul>
+        {% for link1, link2, similarity_ratio in most_similar_links %}
+            <li>
+                <p>Link 1: {{ link1 }}</p>
+                <p>Link 2: {{ link2 }}</p>
+                <p>Benzerlik Oranı: {{ similarity_ratio }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
